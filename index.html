@@ -1,0 +1,43 @@
+<html>
+  <title>
+    Image Uploader Plugin Demo
+  </title>
+  <head>
+    <script src="jquery-2.1.4.js"></script>
+    <script src="image-uploader-1.0.0.js"></script> 
+    <script src="image-view.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="col-lg-12 col-lg-offset-12" id="flash"></div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-lg-12">
+          <label for="uploadImage"> Upload Images </label>
+          <select class="form-control col-lg-12 imageCategories">
+            <option value="" selected disabled>Select Category for Images</option>
+            <option> Options-1 </option>
+            <option> Options-2 </option>
+            <option> Options-3 </option>
+            <option> Options-4 </option>
+            <option> Options-5 </option>
+            <option> Options-6 </option>
+            <option> Options-7 </option>
+            <option> Options-8 </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="imageUploader">
+      <div id="dropZone">
+        <span>
+          <a class="glyphicon glyphicon-plus uploadImage" href="javascript:void(0);"></a>
+        </span>
+        <input type="file" id="uploadFile" name="image[file]" multiple="multiple"></input>
+        <label for="dragAndDrop"> Drag and Drop Images Here </label>
+      </div>
+    </div>
+    <div class="well" id="imagePreviewContainer"> </div>
+  </body>
+</html>

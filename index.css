@@ -1,0 +1,82 @@
+#dropZone
+{
+  border: 2px dashed #0B85A1;
+  width: 400px;
+  margin-bottom: 50px;
+  width: inherit;
+  padding: 20px 20px;
+  height: 100px;
+}
+
+#uploadFile {
+  display: none;
+}
+
+.uploadImage {
+  margin: 0px auto;
+}
+
+#dropZone a {
+  text-decoration: none;
+  text-align: center;
+}
+
+#dropZone a {
+  display: block;
+  margin: 0px auto;
+}
+
+#dropZone span {
+  margin-bottom: 20px;
+  display: block;
+}
+
+#dropZone label {
+  display: block;
+  text-align: center;
+  font-weight: normal;
+
+}
+
+#dropZone label {
+  display: block;
+  text-align: center;
+}
+
+label {
+  font-weight: normal;
+}
+
+#imagePreviewContainer {
+  height: auto;
+}
+
+.uploadImgWrap {
+  position: relative;
+  float: left;
+}
+
+.uploadImgWrap a.glyphicon {
+  position: absolute;
+  text-decoration: none;
+  right: 8px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.imagePreview label {
+  float: left;
+  font-weight: normal;
+}
+
+.imagePreview a {
+  float: right;
+  text-decoration: none;
+}
+
+.uploadImgWrap img {
+  width: 120px;
+  height: 90px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
