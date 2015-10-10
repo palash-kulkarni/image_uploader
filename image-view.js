@@ -16,7 +16,7 @@ var ImageView = function () {
   };
 
   // It initialize/re-initialize an object image
-  _imageSetting = function () {
+  var _imageSetting = function () {
     return this.image = {
       categories: {},
       types: /\/(gif|jpe?g|png)$/i,
@@ -31,7 +31,7 @@ var ImageView = function () {
 
   // NOTE: Event delegation
   // This method binds all the events
-  _bindEvents = function (image, imageUploader) {
+  var _bindEvents = function (image, imageUploader) {
     $('.uploadImage').on('click', function () {
       $('#uploadFile').trigger('click');
     });
