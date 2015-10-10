@@ -54,3 +54,6 @@ var ImageView = function () {
     });
   };
 };
+
+window.views || (window.views = {});
+window.views.imageView = ImageView;
