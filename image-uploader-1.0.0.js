@@ -1,5 +1,5 @@
 var ImageUploader = function () {
-  
+
   // Traverse array of FileList when Single/Multiple Images are selected or dropped in DropZone
   this.traverseImageFiles = function (files, image) {
     that = this
@@ -23,6 +23,8 @@ var ImageUploader = function () {
     });
   };
 
+
+
   this.validateFileType = function (files, image) {
     var validateFlag = true;
     that = this;
@@ -35,6 +37,8 @@ var ImageUploader = function () {
     return(validateFlag);
   };
 
+
+
   // Binds multiple deletion of image previews after atleast one image preview is added
   this.bindDeleteAllPreviewEvent = function (image) {
     $('.preview-trash').on('click', function () {
@@ -44,9 +48,11 @@ var ImageUploader = function () {
     });
   };
 
+
+
   // Displays preview of images dynamically on view
   this.displayPreview = function (imageFile, imageCategory, image) {
-    var previewContainer = $("<div class='" + imageCategory + " uploadImgWrap' data-category='" + imageCategory + "'>" + 
+    var previewContainer = $("<div class='" + imageCategory + " uploadImgWrap' data-category='" + imageCategory + "'>" +
       "<img data-id=" + image.categories['' + imageCategory].files.length + "></img></div>");
     $(".imagePreview[data-category='" + imageCategory + "']").append(previewContainer);
     previewContainer.append("<a class='glyphicon single-preview-trash glyphicon-trash' data-id='"+ image.categories['' + imageCategory].files.length + "'></a>");
@@ -60,6 +66,8 @@ var ImageUploader = function () {
     })(img);
     reader.readAsDataURL(imageFile);
   };
+
+
 
   // Binds single image delete event after preview of image and delete icon is added
   this.bindSingleDeleteEvent = function (imageCategory, image) {
@@ -75,6 +83,8 @@ var ImageUploader = function () {
     });
   };
 
+
+
   // Private Methods
   _initImageCategory = function (context, categoryName, image) {
     image.categories['' + categoryName] = {
@@ -89,6 +99,16 @@ var ImageUploader = function () {
       .append("<div class='clearfix'></div>");
     context.bindDeleteAllPreviewEvent(image);
   };
+
+
+
+  this.clientMessage = {
+    display: function(selector, message){
+      $(selector).text(message).fadeIn(0).delay(4000).fadeOut();
+    }
+
+  };
+
 };
 
 window.services || (window.services = {});
