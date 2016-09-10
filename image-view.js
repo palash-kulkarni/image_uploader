@@ -1,7 +1,7 @@
 var ImageView = function () {
   this.image = {
     categories: {},
-    types: /\/(gif|jpe?g|png)$/i,
+    types: /\/(gif|jpe?g|png|pdf)$/i,
     failureMessage: {
       invalidFileType: 'Invalid File Type',
       inavlidImageCategory: 'Please select image category'
